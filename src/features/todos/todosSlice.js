@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const baseUrl = "https://htjzdwmwafanwtjlemwc.supabase.co/rest/v1/Todos";
+const baseUrl = "https://uknkhszcnogauppzaeox.supabase.co/rest/v1/todos";
 const apiKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh0anpkd213YWZhbnd0amxlbXdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjI5NjIzMjYsImV4cCI6MjAzODUzODMyNn0.0cWkAft4CXmWVZId58uoW7eWijCfPIYHy9Pps-LC8k8";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrbmtoc3pjbm9nYXVwcHphZW94Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjkzMjY2OTUsImV4cCI6MjA0NDkwMjY5NX0.si7m139qw3dR79klcAGBKbffDiO-6U1UGc0ebA8jsX8";
 
 export const createItem = createAsyncThunk(
   "items/createItem",
