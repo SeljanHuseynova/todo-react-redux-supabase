@@ -1,0 +1,229 @@
+// Variables
+$background-color: #272727;
+$container-bg: #3a3a3a;
+$primary-color: white;
+$scrollbar-bg: #2c2c2c;
+$scrollbar-thumb: #4a4a4a;
+$scrollbar-thumb-hover: #575757;
+$button-bg: #ff6f3f;
+$button-hover-bg: #f25019;
+$save-btn-bg: #45a049;
+$save-btn-hover-bg: #4caf50;
+$delete-btn-bg: #ff4b4b;
+$delete-btn-hover-bg: #ff2626;
+$update-btn-bg: #ffc107;
+$update-btn-hover-bg: #ffb300;
+$text-color: #a9a9a9;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Varela", sans-serif;
+  transition: all 0.4s ease;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: antiquewhite;
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $background-color;
+}
+
+.add-btn {
+  font-size: 20px;
+}
+
+.container {
+  .task {
+    margin: 0;
+  }
+  background-color: $container-bg;
+  color: $primary-color;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: example 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+ul {
+  max-height: 250px;
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-bg;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background: $scrollbar-thumb-hover;
+    }
+  }
+
+  li {
+    background-color: $scrollbar-thumb;
+    color: $primary-color;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $scrollbar-thumb-hover;
+    }
+
+    .li-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+   
+    .delete {
+      background-color: $delete-btn-bg;
+      color: $primary-color;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $delete-btn-hover-bg;
+      }
+    }
+
+    .update {
+      background-color: $update-btn-bg;
+      color: $primary-color;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $update-btn-hover-bg;
+      }
+    }
+  }
+}
+
+form {
+  display: flex;
+  gap: 10px;
+
+  input {
+    width: 85%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: $scrollbar-bg;
+    color: $primary-color;
+
+    &::placeholder {
+      color: $text-color;
+    }
+  }
+
+  button {
+    width: 15%;
+    padding: 10px;
+    border: none;
+    background-color: $button-bg;
+    color: $primary-color;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $button-hover-bg;
+    }
+  }
+}
+
+.save-btn {
+  border: none;
+  outline: none;
+  padding: 2px 8px;
+  border-radius: 5px;
+  background-color: $update-btn-bg;
+  color: $primary-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $update-btn-hover-bg;
+  }
+}
+
+.save-input {
+  border: none;
+  outline: none;
+  background-color: $scrollbar-bg;
+  color: $primary-color;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+
+  .top {
+    p {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+
+  button {
+    padding: 10px;
+    border: none;
+    background-color: $save-btn-hover-bg;
+    color: $primary-color;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $save-btn-bg;
+    }
+  }
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
